@@ -187,8 +187,8 @@ Si encuentras un bug, crea un issue en GitHub con:
 
 ## 👥 Colaboradores
 
-- [Nombre Colaborador 1]
-- [Nombre Colaborador 2]
+- Danikartt
+- AlexanderVC0123
 
 ## 📞 Contacto
 
