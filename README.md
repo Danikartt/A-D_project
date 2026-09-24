@@ -73,9 +73,9 @@ npm install
 Crear archivo `.env.local` en la raíz del proyecto:
 
 ```env
-NEXT_PUBLIC_GEMINI_API_KEY=tu_api_key_aqui
+GEMINI_API_KEY=tu_api_key_aqui
 DATABASE_URL=tu_url_base_datos_aqui
-NEXT_PUBLIC_APP_NAME=Nombre del Negocio
+APP_NAME=Nombre del Negocio
 ```
 
 **Nota:** Para obtener la API Key de Gemini:
