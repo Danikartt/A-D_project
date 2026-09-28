@@ -27,50 +27,48 @@ Permitiendo que el dueño del negocio se enfoque en las operaciones principales 
 **Frontend:**
 - React
 - Next.js
-- TailwindCSS (o framework CSS utilizado)
+- TailwindCSS
 
 **Backend/Integración:**
 - Node.js / Next.js API Routes
 - Google Gemini API (chatbot)
 
 **Base de Datos:**
-- PostgreSQL (si se utiliza) / Firebase (si se utiliza)
+- App de ejemplo, sin base de datos
 
 **Control de Versiones:**
 - Git / GitHub
 - Flujo de trabajo con ramas independientes por desarrollador
 
-## 📋 Requisitos Previos
+## ✨ Funcionalidades
 
-- Node.js >= 16.x
-- npm o yarn
-- Cuenta de Google Cloud (para acceso a Gemini API)
-- Git
+- 🚧 Chatbot con IA (Gemini), personalizable por negocio
+- ✅ Recopilación de datos de clientes vía formularios integrados
+- 🚧 Gestión y confirmación de citas
+- 🚧 Generación automática de presupuestos
+- ✅ Interfaz responsive (desktop y mobile)
 
-## 🔧 Instalación y Setup
+## 📸 Capturas de pantalla
 
-### 1. Clonar el repositorio
+> [PENDIENTE]
+
+
+
+## 🤖 El chatbot en acción
+
+> [PENDIENTE - El comportamiento del chatbot se personaliza por negocio mediante un system prompt configurable, adaptando tono y objetivos (agendar citas, generar presupuestos, resolver dudas) al contexto de cada cliente.]
+
+
+
+## 🚀 Instalación local
 
 ```bash
-git clone https://github.com/[tu-usuario]/[nombre-repo].git
+git clone https://github.com/Danikartt/[nombre-repo].git
 cd [nombre-repo]
-```
-
-### 2. Crear rama de trabajo personal
-
-```bash
-git checkout -b develop/[tu-nombre]
-```
-
-### 3. Instalar dependencias
-
-```bash
 npm install
 ```
 
-### 4. Variables de Entorno
-
-Crear archivo `.env.local` en la raíz del proyecto:
+Crea un archivo `.env.local` en la raíz:
 
 ```env
 GEMINI_API_KEY=tu_api_key_aqui
@@ -78,128 +76,72 @@ DATABASE_URL=tu_url_base_datos_aqui
 APP_NAME=Nombre del Negocio
 ```
 
-**Nota:** Para obtener la API Key de Gemini:
-1. Ir a [Google AI Studio](https://aistudio.google.com)
-2. Crear un nuevo proyecto
-3. Habilitar Gemini API
-4. Generar API Key
+Para obtener la API Key de Gemini: [Google AI Studio](https://aistudio.google.com) → crear proyecto → habilitar Gemini API → generar clave.
 
-### 5. Ejecutar en desarrollo
+Arranca el servidor de desarrollo:
 
 ```bash
 npm run dev
 ```
 
-La aplicación estará disponible en `http://localhost:3000`
+Disponible en `http://localhost:3000`.
 
-## 📁 Estructura del Proyecto
 
-```
+## 📁 Estructura del proyecto
+
 ├── app/
-│   ├── api/
-│   │   ├── chat/          # Endpoint del chatbot
-│   │   ├── citas/         # Gestión de citas
-│   │   └── presupuestos/  # Generación de presupuestos
-│   ├── components/
-│   ├── pages/
-│   └── layout.js
-├── public/
-├── styles/
-├── .env.local
-├── next.config.js
+│ ├── api/
+│ │ └── chat/ 
+│ |  └── route.ts # Endpoint del chatbot
+│ ├── contacto/ 
+| |    └── page.tsx # Pagina de contacto
+│ ├── servicios/ 
+| |    └── page.tsx # Pagina de servicios
+│ ├── error.tsx
+| ├── global.css
+| ├── layout.tsx
+| ├── loading.tsx
+| ├── not-found.tsx
+| └── page.tsx
+| 
+├── components/
+| ├── layout/
+| | ├── header.tsx
+| | └── footer.tsx
+| ├── shared/
+| | ├── carousel.tsx
+| | ├── chatbot.tsx
+| | ├── contact-form.tsx
+| | └── cta-button.tsx
+| └── ui/
+|   ├── button.tsx
+|   └── input.tsx
+├── lib/
+|   ├── constants.ts
+|   ├── data.tsx
+|   └── utils.tsx
+├── stores/
+|   └── ui-store.ts
+├── types/
+|   └── index.ts
 └── package.json
-```
 
-## 💻 Flujo de Trabajo Colaborativo
 
-Este proyecto usa un modelo de ramas independientes para cada desarrollador:
 
-### Crear tu rama de trabajo
+## 🧪 Testing
 
-```bash
-git checkout -b develop/[tu-nombre]
-```
+> [PENDIENTE ]
 
-### Actualizar desde main
 
-```bash
-git fetch origin
-git rebase origin/main
-```
-
-### Crear Pull Request
-
-1. Push a tu rama: `git push origin develop/[tu-nombre]`
-2. Abre un PR contra `main` o `develop`
-3. Describe los cambios realizados
-4. Espera revisión del otro colaborador
-5. Merge después de aprobación
-
-### Resolver Conflictos
-
-Si hay conflictos al hacer rebase o merge:
-
-```bash
-# Resolver conflictos manualmente en los archivos
-git add .
-git rebase --continue
-# o
-git merge --continue
-```
-
-## 🤖 Configuración del Chatbot
-
-El chatbot puede personalizarse para diferentes tipos de negocios. Ejemplo de configuración:
-
-```javascript
-// api/chat/route.js
-const systemPrompt = `Eres un asistente de atención al cliente para [Nombre del Negocio].
-Tu objetivo es:
-- Responder preguntas sobre servicios/productos
-- Asistir en la generación de presupuestos
-- Agendar citas
-- Recopilar información de clientes de manera natural y profesional.
-
-Sé amable, profesional y eficiente.`;
-```
-
-## 📝 Primeros Pasos para Desarrolladores
-
-1. **Lee esta documentación** completamente
-2. **Crea tu rama** (`develop/[tu-nombre]`)
-3. **Entiende la arquitectura actual** antes de modificar
-4. **Haz commits pequeños y descriptivos**: `git commit -m "feat: agregar validación en formulario de citas"`
-5. **Comunica cambios grandes** con el otro colaborador antes de implementarlos
-
-## 🐛 Reporte de Bugs
-
-Si encuentras un bug, crea un issue en GitHub con:
-- Descripción clara del problema
-- Pasos para reproducirlo
-- Resultado esperado vs. actual
-- Entorno (OS, navegador, versión de Node)
-
-## 📚 Documentación Adicional
-
-- [Documentación de Next.js](https://nextjs.org/docs)
-- [Google Gemini API Docs](https://ai.google.dev/docs)
-- [Git Workflow Guide](https://git-scm.com/book/es/v2)
 
 ## 👥 Colaboradores
 
-- Danikartt
-- AlexanderVC0123
-
-## 📞 Contacto
-
-Para preguntas o sugerencias sobre el proyecto, abre un issue o contacta directamente a los colaboradores.
+- [Danikartt](https://github.com/Danikartt)
+- [AlexanderVC0123](https://github.com/AlexanderVC0123)
 
 ## 📄 Licencia
 
-Este proyecto está bajo licencia [MIT / GPL / Licencia de tu elección]. Ver `LICENSE` para más detalles.
+[Sin licencia]
 
----
 
-**Estado del Proyecto:** 🔨 En Desarrollo
-
-Última actualización: 2026
+**Estado del proyecto:** 🔨 En desarrollo activo
