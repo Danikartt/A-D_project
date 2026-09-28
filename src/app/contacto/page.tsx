@@ -15,7 +15,7 @@ export default function ContactoPage() {
         {/* Header */}
         <div className="mb-16">
           <p className="text-novex-red font-bold uppercase tracking-[0.3em] text-sm mb-3">■ Estamos aquí</p>
-          <h1 className="text-novex-white red-line" style={{ fontFamily: 'var(--font-display)' }}>
+          <h1 className="red-line" style={{ fontFamily: 'var(--font-display)' }}>
             CONTACTO
           </h1>
         </div>
@@ -23,7 +23,7 @@ export default function ContactoPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Form */}
           <div className="bg-novex-surface border border-novex-border rounded-2xl p-8">
-            <h2 className="text-novex-white font-bold text-lg mb-6 uppercase tracking-widest">
+            <h2 className="font-bold text-lg mb-6 uppercase tracking-widest">
               Envíanos un mensaje
             </h2>
             <ContactForm />
@@ -33,14 +33,14 @@ export default function ContactoPage() {
           <div className="flex flex-col gap-8">
             {/* Info card */}
             <div className="bg-novex-surface border border-novex-border rounded-2xl p-8 space-y-6">
-              <h2 className="text-novex-white font-bold text-lg uppercase tracking-widest">Información</h2>
+              <h2 className="font-bold text-lg uppercase tracking-widest">Información</h2>
 
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 bg-novex-red/10 text-novex-red rounded-lg flex items-center justify-center shrink-0">
                   <MapPin size={18} />
                 </div>
                 <div>
-                  <p className="text-novex-white font-semibold text-sm mb-0.5">Dirección</p>
+                  <p className="font-semibold text-sm mb-0.5">Dirección</p>
                   <p className="text-novex-gray-lt text-sm">{contactInfo.address}</p>
                 </div>
               </div>
@@ -50,7 +50,7 @@ export default function ContactoPage() {
                   <Phone size={18} />
                 </div>
                 <div>
-                  <p className="text-novex-white font-semibold text-sm mb-0.5">Teléfono</p>
+                  <p className="font-semibold text-sm mb-0.5">Teléfono</p>
                   <a href={`tel:${contactInfo.phone}`} className="text-novex-gray-lt hover:text-novex-red text-sm transition-colors">
                     {contactInfo.phone}
                   </a>
@@ -62,7 +62,7 @@ export default function ContactoPage() {
                   <Mail size={18} />
                 </div>
                 <div>
-                  <p className="text-novex-white font-semibold text-sm mb-0.5">Email</p>
+                  <p className="font-semibold text-sm mb-0.5">Email</p>
                   <a href={`mailto:${contactInfo.email}`} className="text-novex-gray-lt hover:text-novex-red text-sm transition-colors">
                     {contactInfo.email}
                   </a>
@@ -74,12 +74,12 @@ export default function ContactoPage() {
                   <Clock size={18} />
                 </div>
                 <div>
-                  <p className="text-novex-white font-semibold text-sm mb-2">Horario</p>
+                  <p className="font-semibold text-sm mb-2">Horario</p>
                   <ul className="space-y-1">
                     {contactInfo.hours.map((h) => (
                       <li key={h.days} className="flex justify-between gap-6 text-sm">
                         <span className="text-novex-gray-lt">{h.days}</span>
-                        <span className="text-novex-white font-medium">{h.time}</span>
+                        <span className="font-medium">{h.time}</span>
                       </li>
                     ))}
                   </ul>

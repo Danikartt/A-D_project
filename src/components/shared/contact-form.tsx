@@ -32,7 +32,7 @@ export function ContactForm() {
     setSent(true);
   }
 
-  const inputClass = "w-full bg-novex-surface border border-novex-border rounded-lg px-4 py-3 text-novex-white text-sm placeholder:text-novex-gray-lt focus:outline-none focus:border-novex-red transition-colors";
+  const inputClass = "w-full bg-novex-surface border border-novex-border rounded-lg px-4 py-3 text-sm placeholder:text-novex-gray-lt focus:outline-none focus:border-novex-red transition-colors";
 
   if (sent) {
     return (

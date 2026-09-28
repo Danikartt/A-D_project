@@ -28,7 +28,7 @@ export default function ServiciosPage() {
         {/* Header */}
         <div className="mb-16">
           <p className="text-novex-red font-bold uppercase tracking-[0.3em] text-sm mb-3">■ Lo que hacemos</p>
-          <h1 className="text-novex-white red-line" style={{ fontFamily: 'var(--font-display)' }}>
+          <h1 className="red-line" style={{ fontFamily: 'var(--font-display)' }}>
             NUESTROS SERVICIOS
           </h1>
           <p className="text-novex-gray-lt mt-6 text-lg max-w-2xl">
@@ -42,7 +42,7 @@ export default function ServiciosPage() {
           if (!catServices.length) return null;
           return (
             <div key={cat.key} className="mb-16">
-              <h2 className="text-novex-white text-xl font-bold uppercase tracking-widest mb-6 flex items-center gap-3">
+              <h2 className="text-xl font-bold uppercase tracking-widest mb-6 flex items-center gap-3">
                 <span className="w-8 h-0.5 bg-novex-red inline-block" />
                 {cat.label}
               </h2>
@@ -58,7 +58,7 @@ export default function ServiciosPage() {
                         <Icon size={22} />
                       </div>
                       <div className="flex flex-col flex-1">
-                        <h3 className="text-novex-white font-bold text-base mb-1">{s.name}</h3>
+                        <h3 className="font-bold text-base mb-1">{s.name}</h3>
                         <p className="text-novex-gray-lt text-sm leading-relaxed flex-1">{s.description}</p>
                         <div className="flex items-center justify-between mt-4 pt-3 border-t border-novex-border">
                           <span className="text-novex-red font-bold text-sm">{s.price}</span>
@@ -75,7 +75,7 @@ export default function ServiciosPage() {
 
         {/* CTA */}
         <div className="mt-8 text-center py-14 border border-novex-border rounded-2xl bg-novex-surface">
-          <h2 className="text-novex-white mb-3" style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.8rem,3vw,2.5rem)' }}>
+          <h2 className="mb-3" style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.8rem,3vw,2.5rem)' }}>
             ¿NO ENCUENTRAS LO QUE BUSCAS?
           </h2>
           <p className="text-novex-gray-lt mb-8">Contáctanos y te asesoraremos sin compromiso.</p>

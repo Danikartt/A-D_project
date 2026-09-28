@@ -21,7 +21,7 @@ export function Footer() {
 
         {/* Links */}
         <div>
-          <h4 className="text-novex-white font-bold uppercase tracking-widest text-sm mb-4">Navegación</h4>
+          <h4 className="font-bold uppercase tracking-widest text-sm mb-4">Navegación</h4>
           <ul className="space-y-2">
             {[['/', 'Inicio'], ['/servicios', 'Servicios'], ['/contacto', 'Contacto']].map(([href, label]) => (
               <li key={href}>
@@ -35,7 +35,7 @@ export function Footer() {
 
         {/* Contact */}
         <div>
-          <h4 className="text-novex-white font-bold uppercase tracking-widest text-sm mb-4">Contacto</h4>
+          <h4 className="font-bold uppercase tracking-widest text-sm mb-4">Contacto</h4>
           <ul className="space-y-3">
             <li className="flex items-start gap-3">
               <MapPin size={16} className="text-novex-red mt-0.5 shrink-0" />

@@ -37,12 +37,8 @@ export function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
           <Wrench size={22} className="text-novex-red transition-transform group-hover:rotate-12" />
-          <span
-            className="font-display text-2xl tracking-widest text-novex-white"
-            style={{ fontFamily: 'var(--font-display)' }}
-          >
-            <span className="text-novex-red">AUTO</span>TALLER
-            <span className="text-novex-red ml-1">NOVEX</span>
+          <span className="font-display text-2xl tracking-widest" style={{ fontFamily: 'var(--font-display)' }}>
+            <span className="text-novex-red">AUTO</span>TALLER <span className="text-novex-red">NOVEX</span>
           </span>
         </Link>
 

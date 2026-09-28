@@ -39,7 +39,7 @@ export default function HomePage() {
             ■ Taller Mecánico Profesional en Madrid
           </p>
           <h1
-            className="font-display text-novex-white leading-none mb-6"
+            className="font-display leading-none mb-6"
             style={{ fontFamily: 'var(--font-display)' }}
           >
             TU COCHE,<br />
@@ -84,7 +84,7 @@ export default function HomePage() {
       <section className="py-24 bg-novex-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="mb-14">
-            <h2 className="text-novex-white red-line" style={{ fontFamily: 'var(--font-display)' }}>
+            <h2 className="red-line" style={{ fontFamily: 'var(--font-display)' }}>
               SERVICIOS DESTACADOS
             </h2>
           </div>
@@ -98,7 +98,7 @@ export default function HomePage() {
                   {iconMap[s.icon] ?? <Droplets size={28} />}
                 </div>
                 <div>
-                  <h3 className="text-novex-white font-bold mb-1">{s.name}</h3>
+                  <h3 className="font-bold mb-1">{s.name}</h3>
                   <p className="text-novex-gray-lt text-sm leading-relaxed">{s.description}</p>
                 </div>
                 <div className="mt-auto pt-4 border-t border-novex-border flex justify-between items-center">
@@ -127,7 +127,7 @@ export default function HomePage() {
       {/* ── CTA CONTACTO ──────────────────────────────────────── */}
       <section className="py-24 bg-novex-black">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-novex-white mb-4" style={{ fontFamily: 'var(--font-display)' }}>
+          <h2 className="mb-4" style={{ fontFamily: 'var(--font-display)' }}>
             ¿NECESITAS UNA REVISIÓN?
           </h2>
           <p className="text-novex-gray-lt text-lg mb-10">
@@ -142,7 +142,7 @@ export default function HomePage() {
             </Link>
             <a
               href="tel:+34912345678"
-              className="px-10 py-4 border-2 border-novex-gray text-novex-white hover:border-novex-red font-bold uppercase tracking-widest text-sm rounded transition-colors"
+              className="px-10 py-4 border-2 border-white/30 hover:border-novex-red font-bold uppercase tracking-widest text-sm rounded transition-colors"
             >
               +34 91 234 56 78
             </a>
