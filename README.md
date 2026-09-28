@@ -139,9 +139,7 @@ Disponible en `http://localhost:3000`.
 - [Danikartt](https://github.com/Danikartt)
 - [AlexanderVC0123](https://github.com/AlexanderVC0123)
 
-## 📄 Licencia
 
-[Sin licencia]
 
 
 **Estado del proyecto:** 🔨 En desarrollo activo
